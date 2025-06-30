@@ -9,7 +9,7 @@ use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Navigation\MenuItem;
 use Filament\Navigation\NavigationGroup;
-use Filament\Notifications\NotificationPlugin;
+// Hapus baris "use Filament\Notifications\NotificationPlugin;" karena sudah tidak ada di v3
 use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
@@ -76,9 +76,6 @@ class AdminPanelProvider extends PanelProvider
                 'account' => MenuItem::make()
                     ->label('Akun Saya')
                     ->url(fn (): string => \Filament\Facades\Filament::getUrl()),
-            ])
-            ->plugins([
-                NotificationPlugin::make(),
-            ]);
+            ]); // Titik koma (;) dipindahkan ke sini setelah blok ->plugins() dihapus
     }
 }
