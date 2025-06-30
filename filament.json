@@ -1,0 +1,5 @@
+{
+  "panels": [
+    "App\\Providers\\Filament\\AdminPanelProvider"
+  ]
+}
